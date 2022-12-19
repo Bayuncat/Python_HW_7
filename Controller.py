@@ -32,3 +32,19 @@ def search(anyfield):
             j += 1
     if j == 0: print('\nТакой контакт не найден.\n')
 
+# Изменение контакта
+def Update(id):
+    print('Измените контакт: \n')
+    print(f'{id}. ', end=' ')
+    Contacts.Contacts.display_contacts(db_rw.my_list[id-1])
+    name = str(input(f'Введите имя: '))
+    surname = str(input(f'Введите фамилию: '))
+    phone = str(input(f'Введите телефон: '))
+    db_rw.my_list[id-1] = Contacts.Contacts(name, surname, phone)
+    print('Контакт изменен: \n')
+
+    
+    
+
+
+
